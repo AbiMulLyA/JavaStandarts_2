@@ -5,9 +5,9 @@ import java.util.stream.IntStream;
 public class Soal1 {
     public static void main(String[] args) {
         status("ibu ratna antar ubi");
-        status("ibu ratna anta ubi");
-        status("Abi");
-        status("kasur rusak");
+        status("A nut for a jar of tuna.");
+        status("Was it a car or a cat I saw?");
+        status("Yo, banana boy!");
     }
 
     public static void status (String text){
@@ -17,7 +17,7 @@ public class Soal1 {
     }
 
     public static boolean checkPalyndrome(String text){
-        String temp = text.replace("\\s+", "").toLowerCase();
+        String temp = text.replaceAll("[^A-Za-z]+", "").toLowerCase();
         return IntStream.range(0, temp.length()/2)
                 .noneMatch(character -> temp.charAt(character) != temp.charAt(temp.length() - character - 1));
     }
