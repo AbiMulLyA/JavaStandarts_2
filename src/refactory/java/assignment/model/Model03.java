@@ -1,12 +1,12 @@
-package refactory.java.assignment;
+package refactory.java.assignment.model;
 
 import java.util.List;
 
-public class Model {
-    private static Model model;
-    public static Model instance(){
-        if (model == null) model = new Model();
-        return model;
+public class Model03 {
+    private static Model03 model03;
+    public static Model03 instance(){
+        if (model03 == null) model03 = new Model03();
+        return model03;
     }
     private static class CustomerModel {
         public int id;
